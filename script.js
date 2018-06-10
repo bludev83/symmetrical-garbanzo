@@ -3,6 +3,7 @@ const testArea = document.querySelector("#test-area");
 const originText = document.querySelector("#origin-text p").innerHTML;
 const resetButton = document.querySelector("#reset");
 const theTimer = document.querySelector(".timer");
+const temp1123 = 45
 
 var timer = [0,0,0,0];
 
@@ -25,7 +26,7 @@ function spellCheck() {
     console.log(textEntered);
 }
 
-// Start the timer:
+// Start the timer once again:
 function start() {
 let textEnteredLength = testArea.value.length;
 if (textEnteredLength === 0) {
