@@ -3,7 +3,6 @@ const testArea = document.querySelector("#test-area");
 const originText = document.querySelector("#origin-text p").innerHTML;
 const resetButton = document.querySelector("#reset");
 const theTimer = document.querySelector(".timer");
-const temp1123 = 45
 
 var timer = [0,0,0,0];
 
@@ -29,23 +28,20 @@ function runTimer() {
 // Match the text entered with the provided text on the page:
 function spellCheck() {
     let textEntered = testArea.value;
-    console.log(textEntered);
-    let originTextMatch = originText.substring(0, textEntered.length);
+    let originTextMatch = originText.substring(0,textEntered.length);
+
     if (textEntered == originText) {
-        textWrapper.style.borderColor = "#429890"; //green
-        console.log("Entire Match");
+        textWrapper.style.borderColor = "#429890";
     } else {
         if (textEntered == originTextMatch) {
-            textWrapper.style.borderColor = "#65CCF3"; //blue
-            console.log("Partial Match");
+            textWrapper.style.borderColor = "#65CCf3";
         } else {
-            textWrapper.style.borderColor = "#E95D0F"; //orange
-            console.log("Partial Mismatch");
+            textWrapper.style.borderColor = "#E95D0F";
         }
     
     }
 }
-// Start the timer once again:
+// Start The Timer:
 function start() {
 let textEnteredLength = testArea.value.length;
 if (textEnteredLength === 0) {
