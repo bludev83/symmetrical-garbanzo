@@ -30,6 +30,20 @@ function runTimer() {
 function spellCheck() {
     let textEntered = testArea.value;
     console.log(textEntered);
+    let originTextMatch = originText.substring(0, textEntered.length);
+    if (textEntered == originText) {
+        textWrapper.style.borderColor = "#429890"; //green
+        console.log("Entire Match");
+    } else {
+        if (textEntered == originTextMatch) {
+            textWrapper.style.borderColor = "#65CCF3"; //blue
+            console.log("Partial Match");
+        } else {
+            textWrapper.style.borderColor = "#E95D0F"; //orange
+            console.log("Partial Mismatch");
+        }
+    
+    }
 }
 // Start the timer once again:
 function start() {
